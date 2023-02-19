@@ -184,10 +184,10 @@ impressions_function <- function(impressions_time, impressions_timezone, new_imp
 main <- function() {
   ## Import all the CSV and TSV in 4 different variables. (The suppressWarnings function, just allows us to remove
   ## a small warning when we open a CSV file with the command found in this function.)
-  advertiser_table <- suppressWarnings(read.csv2("advertiser.csv", sep = ','))
-  campaigns_table <- suppressWarnings(read.csv2("campaigns.csv", sep = ','))
-  impressions_table <- read.table(file = 'impressions.tsv', sep = '\t', header = TRUE)
-  clicks_table <- read.table(file = 'clicks.tsv', sep = '\t', header = TRUE)
+  advertiser_table <- suppressWarnings(read.csv2("Datas/advertiser.csv", sep = ','))
+  campaigns_table <- suppressWarnings(read.csv2("Datas/campaigns.csv", sep = ','))
+  impressions_table <- read.table(file = 'Datas/impressions.tsv', sep = '\t', header = TRUE)
+  clicks_table <- read.table(file = 'Datas/clicks.tsv', sep = '\t', header = TRUE)
   
   ## Recovery of the headers of each column, in this case "Time" and "Timezone" of the two different TSV files,
   ## that we must modify by putting them in variables that I will use later.
